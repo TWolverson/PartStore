@@ -1,0 +1,10 @@
+﻿@model PartStore.ViewModels.ServiceBooking
+
+@using (Html.BeginForm("BookService", "Vans"))
+{
+    @Html.DisplayFor(m => m.Van.Registration)
+    @Html.DisplayFor(m => m.Van.Make)
+    @Html.DisplayFor(m => m.Van.Model)
+    @Html.DropDownListFor(m => m.SelectedGarage, Model.AvailableGarages)
+    <input type="submit" value="Book">
+}

@@ -1,0 +1,10 @@
+﻿@model PartStore.Van
+<tr>
+    <td>@Html.DisplayFor(x => x.Make)</td>
+    <td>@Html.DisplayFor(x => x.Model)</td>
+    <td>@Html.DisplayFor(x => x.Registration)</td>
+    <td>@Html.DisplayFor(x => x.LastWashed)</td>
+    <td>@Html.DisplayFor(x => x.LastServiced)</td>
+    <td>@Html.ActionLink("Book a service", "BookServiceForm", new { registration = Model.Registration })</td>
+    <td>@Html.ActionLink("Van Details", "Details", new { registration = Model.Registration })</td>
+</tr>
